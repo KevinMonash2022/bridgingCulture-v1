@@ -398,7 +398,7 @@ export default function FeedThings() {
                 <div className="flex-1 flex justify-center items-center">
                     <div className="bg-[#FFE7DF] text-black p-4 shadow-lg rounded-md text-center">
                         <p>
-                            {"Australia boasts a diverse range of supermarkets catering to every need and budget. From large chains like Woolworths, Coles, and Aldi, known for their extensive product ranges and competitive pricing, to smaller chains like IGA, which focus on local products and personalized service. Each offers a unique shopping experience, whether you're looking for budget-friendly buys, specialty items, or the convenience of location. "}<a href="https://www.soledu.com.au">(SOL Edu)</a> <a href="https://www.mumsmoney.com.au">(Mum's Money Australia)</a>
+                            {"Australia boasts a diverse range of supermarkets catering to every need and budget. From large chains like Woolworths, Coles, and Aldi, known for their extensive product ranges and competitive pricing, to smaller chains like IGA, which focus on local products and personalized service. Each offers a unique shopping experience, whether you're looking for budget-friendly buys, specialty items, or the convenience of location. "}<a href="https://www.soledu.com.au">(SOL Edu)</a> <a href="https://www.mumsmoney.com.au">{"Mum's Money Australia"}</a>
                         </p>
                     </div>
                 </div>
@@ -427,7 +427,7 @@ export default function FeedThings() {
                 <div className="flex-1 flex justify-center items-center">
                     <div className="bg-[#FFE7DF] text-black p-4 shadow-lg rounded-md text-center">
                         <p>
-                            {"Many supermarkets offer loyalty programs, such as Woolworths' Everyday Rewards and Flybuys at Coles, which can lead to significant savings over time. Additionally, exploring Aldi for its low prices and quality private label products can help manage your budget effectively."} <a href="https://www.mumsmoney.com.au">(Mum's Money Australia)</a> <a href="https://www.explore.com">(Explore)</a>
+                            {"Many supermarkets offer loyalty programs, such as Woolworths' Everyday Rewards and Flybuys at Coles, which can lead to significant savings over time. Additionally, exploring Aldi for its low prices and quality private label products can help manage your budget effectively."} <a href="https://www.mumsmoney.com.au">{"Mum's Money Australia"}</a> <a href="https://www.explore.com">(Explore)</a>
                         </p>
                     </div>
                 </div>
@@ -443,7 +443,7 @@ export default function FeedThings() {
                         <ul>
                             <li>{"Comprehensive Product Ranges: Major chains like Woolworths and Coles offer an extensive selection of food and household items, ensuring you'll find everything you need in one place."}</li>
                             <li>{"Quality and Savings: Aldi is renowned for its high-quality private label products at significantly lower prices, providing excellent value for money."}</li>
-                            <li>{"Personalized Service: Smaller chains and local markets pride themselves on offering personalized service, helping you feel welcomed and valued as part of the community. "}<a href="https://www.mumsmoney.com.au">(Mum's Money Australia)</a> <a href="https://www.soledu.com.au">(SOL Edu)</a></li>
+                            <li>{"Personalized Service: Smaller chains and local markets pride themselves on offering personalized service, helping you feel welcomed and valued as part of the community. "}<a href="https://www.mumsmoney.com.au">{"Mum's Money Australia"}</a> <a href="https://www.soledu.com.au">(SOL Edu)</a></li>
                         </ul>
                     </div>
                 </div>
