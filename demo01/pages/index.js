@@ -25,7 +25,7 @@ const UserPage = () => {
   );
 };
 
-// // Server-side authentication check
+// Server-side authentication check
 // export async function getServerSideProps(context) {
 //   const session = await getSession({ req: context.req });
 
