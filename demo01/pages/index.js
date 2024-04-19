@@ -11,38 +11,38 @@ const UserPage = () => {
 
   return (
     <>
-    {/* Header */}
-    <Header/>
+      {/* Header */}
+      <Header />
 
-    {/* Feed */}
-    <FeedHome/>
+      {/* Feed */}
+      <FeedHome />
 
-    {/* Footer */}
-    <Footer/>
+      {/* Footer */}
+      <Footer />
     </>
-    
+
   );
 };
 
-// // // Server-side authentication check
-// export async function getServerSideProps(context) {
-//   const session = await getSession({ req: context.req });
+// // Server-side authentication check
+export async function getServerSideProps(context) {
+  const session = await getSession({ req: context.req });
 
-//   // If no user session exists, redirect to the login page
-//   if (!session) {
-//     return {
-//       redirect: {
-//         destination: '/login', // Adjust the login route if needed
-//         permanent: false,
-//       },
-//     };
-//   }
+  // If no user session exists, redirect to the login page
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login', // Adjust the login route if needed
+        permanent: false,
+      },
+    };
+  }
 
-//   // If the session exists, return the current session
-//   return {
-//     props: { session },
-//   };
-// }
+  // If the session exists, return the current session
+  return {
+    props: { session },
+  };
+}
 
 
 
