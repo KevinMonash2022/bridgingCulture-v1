@@ -10,8 +10,8 @@ export default function Header() {
     { path: '/', label: 'Home' },
     { path: '/things', label: 'Explore' },
     { path: '/map', label: 'Discover Victoria' },
-    { path: '/learn', label: 'Aussie' },
-    { path: '/LLM', label: 'Chatbot' }
+    { path: '/learn', label: 'Aussie accent' },
+    { path: '/LLM', label: 'Aussie bot' }
   ];
 
   return (
