@@ -9,7 +9,9 @@ export default function Header() {
   const menuItems = [
     { path: '/', label: 'Home' },
     { path: '/things', label: 'Explore' },
-    { path: '/map', label: 'Discover Victoria' }
+    { path: '/map', label: 'Discover Victoria' },
+    { path: '/learn', label: 'Aussie' },
+    { path: '/LLM', label: 'Chatbot' }
   ];
 
   return (
