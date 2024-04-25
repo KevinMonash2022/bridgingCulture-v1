@@ -100,16 +100,20 @@ export default function Feed() {
     return (
 
         <div className="container mx-auto my-4 p-4 flex-grow min-h-screen">
-
-            <div className="flex flex-col md:flex-row">
-                {/* left */}
-                <div className="w-full md:w-1/4 p-4 bg-[#FFE7DF] rounded-lg ">
-                    <div className="mb-4">
+ <div className="mb-4 map-search-form">
                         {/* <div className="flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
                             <img src="/pics/dt-icon-search.svg" alt="Search" className='h-6 w-6' />
 
                         </div> */}
-                        <div className="flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
+                       
+
+                        <input
+                            ref={autoCompleteInputRef}
+                            type="text"
+                            placeholder="Enter Post Code/Suburb..."
+                            className="search-form-input w-full p-2 rounded-md border-2 border-gray-200"
+                        />
+                         <div className="search-button flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
                             <div className="relative h-6 w-6">
                                 <Image
                                     src="/pics/dt-icon-search.svg"
@@ -119,17 +123,14 @@ export default function Feed() {
                                 />
                             </div>
                         </div>
-
-                        <input
-                            ref={autoCompleteInputRef}
-                            type="text"
-                            placeholder="Enter Post Code/Suburb..."
-                            className="w-full p-2 rounded-md border-2 border-gray-200"
-                        />
                     </div>
+            <div className="main-map-sec flex flex-col md:flex-row">
+                {/* left */}
+                <div className="w-full md:w-1/4 p-4 bg-[#ef7b7b] rounded-lg ">
+                   
 
-                    <div className="flex flex-col">
-                        <div className="text-lg font-semibold mb-2">Filter</div>
+                    <div className="filter-radio flex flex-col">
+                        <div className="filter-txt text-lg font-semibold mb-2">Filter</div>
                         {['restaurant', 'beach', 'supermarket', 'landmark'].map((category) => (
                             <label key={category} htmlFor={category} className="flex items-center mb-2">
                                 <input
@@ -144,7 +145,7 @@ export default function Feed() {
                             </label>
                         ))}
                         <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            className="search-clear-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                             onClick={clearMarkers}
                         >
                             Clear All
@@ -153,7 +154,7 @@ export default function Feed() {
                 </div>
 
                 {/* map */}
-                <div className="w-full md:w-3/4 p-4">
+                <div className=" right-map-sec w-full md:w-3/4 p-4">
                     <div className="h-96" ref={mapRef}>
                         Loading Map...
                     </div>

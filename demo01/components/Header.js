@@ -5,24 +5,24 @@ import { useRouter } from 'next/router';
 export default function Header() {
   const router = useRouter();
 
-
   const menuItems = [
     { path: '/', label: 'Home' },
-    { path: '/things', label: 'Explore' },
+    { path: '/things', label: 'Start Your Journey' },
     { path: '/map', label: 'Discover Victoria' },
-    { path: '/learn', label: 'Aussie accent' },
-    { path: '/LLM', label: 'Aussie bot' }
+    { path: '/learn', label: 'Aussie Accent' },
+    { path: '/chatbot', label: 'Chatbot' },
+   
   ];
 
   return (
-    <div className="flex sticky top-0 z-50 bg-[#edf2ec] shadow-md p-1">
+    <div className="flex sticky main-header_part top-0 z-50 bg-[#edf2ec] shadow-md p-1">
       <div className="cursor-pointer hover:scale-150 transition-transform duration-200 ease-out" onClick={() => router.push('/')}>
-        <div className="relative" style={{ width: '144px', height: '90px' }}>
-          <Image src="/pics/LOGO-pre.png" layout="fill" objectFit="cover" alt="Logo" />
+        <div className="relative" >
+          <Image className="header-logo" src="/pics/LOGO-img.jpeg" layout="fill" objectFit="cover" alt="Logo" />
         </div>
       </div>
 
-      <div className="flex items-center text-2xl space-x-6">
+      <div className="flex header-menu_part items-center text-2xl space-x-6">
         {menuItems.map(item => (
           <div
             key={item.label}
@@ -37,3 +37,4 @@ export default function Header() {
     </div>
   );
 }
+

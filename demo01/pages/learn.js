@@ -3,6 +3,8 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import YouTubeSearchComponent from '@/components/YouTubeSearchComponent'
 import React from 'react'
+import FeedFlipbook from '@/components/FeedFlipbook'; 
+
 
 export default function learn() {
     return (
@@ -13,6 +15,11 @@ export default function learn() {
             {/* Feed */}
             <FeedLearn />
             {/* <YouTubeSearchComponent /> */}
+
+
+            {/* Flipbook */}
+            <FeedFlipbook />
+
 
 
             {/* Footer */}
