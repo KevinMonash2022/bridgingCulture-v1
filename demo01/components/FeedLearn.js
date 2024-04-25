@@ -6,8 +6,8 @@ export default function FeedLearn() {
     return (
         <>
 
-            <div className="flex-grow min-h-screen">
-                FeedLearn
+            <div className="mt-20 flex-grow min-h-screen">
+
                 <TestLearn />
 
             </div>
