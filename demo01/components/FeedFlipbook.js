@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
-import HTMLFlipBook from "react-pageflip";
+import HTMLFlipBook from 'react-pageflip'
 import styles from "../styles/Flipbook.module.css";
 
 
 const words = [
-  { left: "Welcome to aussie pronunciation dictionary", right: "Click the right side of the page to turn the page" },
-  { left: "Standard English words on the left side of the page", right: "The English phonetic symbols of aussie are on the right side of the page." },
+  { left: "Welcome to aussie pronunciation book", right: "Click the right side of the page to turn the page" },
+  { left: "Standard English words on the top side of the page", right: "The English phonetic symbols of aussie are on the above side of the page." },
   { left: "Car", right: "Caa: The end r is not pronounced" },
   { left: "Caramel", right: "Ca-ra-mel" },
   { left: "Cliché", right: "Clee-shay" },
@@ -42,54 +42,66 @@ const words = [
   { left: "Lollies", right: "lol-lees" }
 ];
 
+
+const searchableTitles = new Set([
+  "Car", "Caramel", "Cliché", "Data", "Daughter", "Detail", "Entrepreneur", "Garage", "Good day",
+  "Hot", "Leisure", "Letter", "Mobile", "Niche", "Privacy", "Salon", "Today", "Tomato",
+  "Vase", "Vitamin", "Water", "Yoghurt", "mate", "G'day", "Maccas", "Tinny", "Bikkie",
+  "Bottle-O", "Brolly", "Cuppa", "Devo", "Esky", "Footy", "Lollies"
+]);
+
 export default function Flipbook() {
-  const [currentPage, setCurrentPage] = useState(0);
+  const [searchTerm, setSearchTerm] = useState('');
   const bookRef = useRef();
 
-  const handlePrevPage = () => {
-    if (bookRef.current) {
-      bookRef.current.getPageFlip().flipPrev();
-      setCurrentPage(bookRef.current.getPageFlip().getCurrentPageIndex());
+  const handleSearch = () => {
+    const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+    const searchIndex = words.findIndex(entry =>
+      entry.left.toLowerCase() === normalizedSearchTerm && searchableTitles.has(entry.left)
+    );
+
+    if (searchIndex !== -1 && bookRef.current) {
+      bookRef.current.pageFlip().flip(searchIndex, 'top');
+    } else {
+      alert("Term not found.");
     }
   };
-
-  const handleNextPage = () => {
-    if (bookRef.current) {
-      bookRef.current.getPageFlip().flipNext();
-      setCurrentPage(bookRef.current.getPageFlip().getCurrentPageIndex());
-    }
-  };
-
-
-  const pages = words.flatMap((word) => [
-    { content: word.left, type: 'left' },
-    { content: word.right, type: 'right' }
-  ]);
 
   return (
-    <div className={styles.flipbook}>
-      <HTMLFlipBook
-        width={400}
-        height={300}
-        size="stretch"
-        minWidth={315}
-        maxWidth={1000}
-        minHeight={300}
-        maxHeight={1000}
-        ref={bookRef}
-        onFlip={(e) => setCurrentPage(e.data)}
-        className={styles.book}
-      >
-        {pages.map((page, index) => (
-          <div className={styles.page} key={index}>
-            <div className={styles.pageContent}>
-              {page.content}
+    <div className="flex flex-col">
+      <div className="mb-5 rounded-2xl p-2 w-1/4 bg-slate-100">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search the book..."
+        />
+        <button className="ml-5" onClick={handleSearch}>Search</button>
+      </div>
+      <div className={styles.flipbook}>
+
+        <HTMLFlipBook
+          width={400}
+          height={300}
+          size="stretch"
+          minWidth={315}
+          maxWidth={1000}
+          minHeight={300}
+          maxHeight={1000}
+          ref={bookRef}
+          className={styles.book}
+        >
+          {words.map((word, index) => (
+            <div className={styles.page} key={`page-${index}`}>
+              <div className={styles.pageContent}>
+                <p>{word.left}</p>  {/* Removed "Left:" */}
+                <p>{word.right}</p> {/* Removed "Right:" */}
+              </div>
             </div>
-          </div>
-        ))}
-      </HTMLFlipBook>
-      {/*  */}
+          ))}
+        </HTMLFlipBook>
+      </div>
     </div>
+
   );
 }
-
