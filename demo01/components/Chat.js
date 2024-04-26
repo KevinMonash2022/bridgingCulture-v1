@@ -80,8 +80,8 @@ export default function Chat() {
         {/* chatting info display */}
         <div className="overflow-y-auto mb-4 flex-1">
           {chat.map((c, index) => (
-            <div key={index} className={`flex items-start ${c.sender === 'User' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`rounded px-4 py-2 text-white ${c.sender === 'User' ? 'bg-blue-500' : 'bg-red-300'}`}>
+            <div key={index} className={`flex items-start ${c.sender === 'User' ? 'justify-end' : 'justify-start'} mb-2`}>
+              <div className={`rounded-2xl px-4 py-2 text-white ${c.sender === 'User' ? 'bg-blue-500' : 'bg-red-300'}`}>
                 {c.message}
               </div>
             </div>
