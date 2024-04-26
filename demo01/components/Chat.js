@@ -44,11 +44,11 @@ export default function Chat() {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* 左侧栏的灰色底框和按钮 */}
+      {/* left side  */}
       <div className="w-1/4 bg-gray-200 shadow-lg flex flex-col justify-center items-center">
         {/* Buttons with black text and pink background */}
         <button
-          className="w-full mb-4 py-2 bg-pink-500 hover:bg-pink-700 text-black font-bold rounded"
+          className="w-full mb-4 py-2 bg-red-300 hover:bg-pink-700 text-black font-bold rounded"
           onClick={() => {
             setSystemPrompt('RolePlay as a nice Australian that helping new migrant, reply shortly');
             setChat([{ sender: 'Assistant', message: "G'day mate!" }]);
@@ -57,7 +57,7 @@ export default function Chat() {
           General Aussie bot
         </button>
         <button
-          className="w-full mb-4 py-2 bg-pink-500 hover:bg-pink-700 text-black font-bold rounded"
+          className="w-full mb-4 py-2 bg-red-300 hover:bg-pink-700 text-black font-bold rounded"
           onClick={() => {
             setSystemPrompt('RolePlay as restaurant staff from Australia, reply shortly');
             setChat([{ sender: 'Assistant', message: "G'day mate! How ya going? Welcome to Bazza's Bar & Grill" }]);
@@ -66,7 +66,7 @@ export default function Chat() {
           Restaurant Staff
         </button>
         <button
-          className="w-full py-2 bg-pink-500 hover:bg-pink-700 text-black font-bold rounded"
+          className="w-full py-2 bg-red-300 hover:bg-pink-700 text-black font-bold rounded"
           onClick={() => {
             setSystemPrompt('RolePlay as telecommunication store staff from Australia, reply shortly');
             setChat([{ sender: 'Assistant', message: "G'day mate! Looking for a new phone or plan today?" }]);
@@ -75,19 +75,19 @@ export default function Chat() {
           Telecom Staff
         </button>
       </div>
-      {/* 右侧聊天内容显示区 */}
-      <div className="w-3/4 flex flex-col bg-blue-900 shadow-xl rounded-lg p-6">
-        {/* 聊天内容显示区域 */}
+      {/* right side chating display */}
+      <div className="w-3/4 flex flex-col grey-300 shadow-xl rounded-lg p-6">
+        {/* chatting info display */}
         <div className="overflow-y-auto mb-4 flex-1">
           {chat.map((c, index) => (
             <div key={index} className={`flex items-start ${c.sender === 'User' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`rounded px-4 py-2 text-white ${c.sender === 'User' ? 'bg-blue-500' : 'bg-green-500'}`}>
+              <div className={`rounded px-4 py-2 text-white ${c.sender === 'User' ? 'bg-blue-500' : 'bg-red-300'}`}>
                 {c.message}
               </div>
             </div>
           ))}
         </div>
-        {/* 用户输入区 */}
+        {/* user input */}
         <div className="flex gap-2">
           <input
             type="text"
@@ -98,7 +98,7 @@ export default function Chat() {
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
           />
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-red-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleSend}
           >
             Send
