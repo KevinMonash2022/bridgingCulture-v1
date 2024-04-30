@@ -41,7 +41,7 @@ export default function learn() {
             {/* Flipbook */}
             <FeedFlipbook />
 
-            <div className="mb-20 mt-20 flex flex-col items-center text-2xl bg-[#ef7b7b] text-white p-2 rounded-2xl">
+            <div className="text-center mb-20 mt-20 flex flex-col items-center text-2xl bg-[#ef7b7b] text-white p-2 rounded-2xl">
                 Simply search for a word and there will be a video containing the Australian accent of the word to help you learn the pronunciation of the word, complete with subtitles
             </div>
 

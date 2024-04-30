@@ -99,35 +99,47 @@ export default function Feed() {
 
     return (
 
-        <div className="container mx-auto my-4 p-4 flex-grow min-h-screen">
- <div className="mb-4 map-search-form">
-                        {/* <div className="flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
+        <div className="mt-10 mx-auto">
+            <div className="mb-8 flex flex-col items-center text-center">
+                {/* test */}
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                        Discover, Dine, and Delight
+                    </h1>
+                    <p className="mt-6 text-lg leading-8 text-gray-600">
+                        Navigate your way to culinary treasures, sandy retreats, essential amenities, and iconic landmarks with ease!
+                    </p>
+
+                </div>
+            </div>
+            <div className="mb-4 map-search-form">
+                {/* <div className="flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
                             <img src="/pics/dt-icon-search.svg" alt="Search" className='h-6 w-6' />
 
                         </div> */}
-                       
 
-                        <input
-                            ref={autoCompleteInputRef}
-                            type="text"
-                            placeholder="Enter Post Code/Suburb..."
-                            className="search-form-input w-full p-2 rounded-md border-2 border-gray-200"
+
+                <input
+                    ref={autoCompleteInputRef}
+                    type="text"
+                    placeholder="Enter Post Code/Suburb..."
+                    className="search-form-input w-full p-2 rounded-md border-2 border-gray-200"
+                />
+                <div className="search-button flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
+                    <div className="relative h-6 w-6 hover:scale-125 ">
+                        <Image
+                            src="/pics/dt-icon-search.svg"
+                            alt="Search"
+                            layout="fill"
+                            objectFit="contain"
                         />
-                         <div className="search-button flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
-                            <div className="relative h-6 w-6">
-                                <Image
-                                    src="/pics/dt-icon-search.svg"
-                                    alt="Search"
-                                    layout="fill"
-                                    objectFit="contain"
-                                />
-                            </div>
-                        </div>
                     </div>
-            <div className="main-map-sec flex flex-col md:flex-row">
+                </div>
+            </div>
+            <div className="main-map-sec flex flex-col md:flex-row mb-6">
                 {/* left */}
                 <div className="w-full md:w-1/4 p-4 bg-[#ef7b7b] rounded-lg ">
-                   
+
 
                     <div className="filter-radio flex flex-col">
                         <div className="filter-txt text-lg font-semibold mb-2">Filter</div>

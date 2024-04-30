@@ -9,13 +9,14 @@ export default function Header() {
     { path: '/', label: 'Home' },
     { path: '/things', label: 'Start Your Journey' },
     { path: '/map', label: 'Discover Victoria' },
+    { path: '/chatbot', label: 'Aussie bot' },
     { path: '/learn', label: 'Aussie Accent' },
-    { path: '/chatbot', label: 'Chatbot' },
+
 
   ];
 
   return (
-    <div className="flex sticky justify-between top-0 z-50 bg-[#edf2ec] shadow-md p-1">
+    <div className="flex sticky justify-between top-0 z-50 bg-[#edf2ec] shadow-md mb-6">
       <div className="cursor-pointer hover:scale-150 transition-transform duration-200 ease-out" style={{ position: 'relative', width: 50, height: 50 }} onClick={() => router.push('/')}>
         <div className="relative" >
           <Image className="header-logo" src="/pics/LOGO.png" layout="fill" objectFit="cover" alt="Logo" />

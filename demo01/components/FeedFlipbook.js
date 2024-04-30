@@ -67,18 +67,34 @@ export default function Flipbook() {
     }
   };
 
+
   return (
+    // <div className="flex flex-col">
+    //   <div className="mb-5 rounded-2xl p-2 w-1/4 bg-slate-100">
+    //     <input
+    //       type="text"
+    //       value={searchTerm}
+    //       onChange={(e) => setSearchTerm(e.target.value)}
+    //       placeholder="Search the book..."
+    //     />
+    //     <button className="ml-5" onClick={handleSearch}>Search</button>
+    //   </div>
+    //   <div className={styles.flipbook}>
+
+
     <div className="flex flex-col">
-      <div className="mb-5 rounded-2xl p-2 w-1/4 bg-slate-100">
+      <div className="mb-5 rounded-2xl p-2 w-1/3 bg-slate-200">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search the book..."
+          placeholder="Search word from the book below"
+          className="w-80 p-2"
         />
-        <button className="ml-5" onClick={handleSearch}>Search</button>
+        <button className="ml-4 text-xl text-[#eeeff1] rounded-3xl bg-slate-400 p-2" onClick={handleSearch}>Search</button>
       </div>
       <div className={styles.flipbook}>
+
 
         <HTMLFlipBook
           width={400}

@@ -109,7 +109,7 @@ export default function FeedHome() {
 
                 <div className=' items-center  explore-sec' >
 
-                    <div onClick={() => router.push('/Aussie')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
+                    <div onClick={() => router.push('/chatbot')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
                         <Image
                             src="/pics/aussie.png" alt="Things to know"
                             layout="fill"
@@ -123,7 +123,7 @@ export default function FeedHome() {
                         <div className='ex-txt'>
                             {"Unlock Aussie slang with our chatbot! Dive into local expressions, boost language skills, and blend seamlessly into the community."}
                         </div>
-                        <button onClick={() => router.push('/map')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
+                        <button onClick={() => router.push('/chatbot')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
@@ -133,7 +133,7 @@ export default function FeedHome() {
 
                 <div className=' items-center  explore-sec' >
 
-                    <div onClick={() => router.push('/Aussie')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
+                    <div onClick={() => router.push('/learn')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
                         <Image
                             src="/pics/Aussie slangs(tab).gif" alt="Things to know"
                             layout="fill"
@@ -147,7 +147,7 @@ export default function FeedHome() {
                         <div className='ex-txt'>
                             {"Master the Aussie accent effortlessly! Explore pronunciation with our Accent Dictionary, refine communication skills, and feel at home in Australian conversations."}
                         </div>
-                        <button onClick={() => router.push('/map')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
+                        <button onClick={() => router.push('/learn')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
