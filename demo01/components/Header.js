@@ -5,6 +5,11 @@ import { useRouter } from 'next/router';
 export default function Header() {
   const router = useRouter();
 
+  const handleNavigation = async (path) => {
+    await router.push(path);
+    router.reload();
+  };
+
   const menuItems = [
     { path: '/', label: 'Home' },
     { path: '/things', label: 'Start Your Journey' },
@@ -29,7 +34,7 @@ export default function Header() {
             key={item.label}
             className={`px-4 cursor-pointer rounded-2xl transition-transform duration-200 ease-out hover:scale-125 ${router.pathname === item.path ? "underline text-[#EF7B7B] underline-offset-8 decoration-[3px]" : "hover:text-[#edf2ec] hover:bg-[#EF7B7B]"
               }`}
-            onClick={() => router.push(item.path)}
+            onClick={() => handleNavigation(item.path)}
           >
             {item.label}
           </div>
