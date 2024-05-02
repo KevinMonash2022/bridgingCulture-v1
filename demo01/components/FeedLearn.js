@@ -1,7 +1,6 @@
 import React from 'react'
 import TestLearn from '@/components/TestLearn'
 
-
 export default function FeedLearn() {
     return (
         <>

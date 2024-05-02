@@ -1,47 +1,17 @@
-import { useEffect } from 'react';
+import React from 'react';
 
-function YouGlishComponent() {
-    useEffect(() => {
-
-        const tag = document.createElement('script');
-        tag.src = "https://youglish.com/public/emb/widget.js";
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        window.onYouglishAPIReady = function () {
-            const widget = new window.YG.Widget("widget-1", {
-                width: 640,
-                components: 9,
-                events: {
-                    'onFetchDone': onFetchDone,
-                    'onVideoChange': onVideoChange,
-                    'onCaptionConsumed': onCaptionConsumed
-                }
-            });
-
-
-            widget.fetch("courage", "english", "aus");
-        };
-
-        function onFetchDone(event) {
-            if (event.totalResult === 0) alert("No result found");
-        }
-
-        function onVideoChange(event) {
-            console.log("Video changed to track number: ", event.trackNumber);
-        }
-
-        function onCaptionConsumed(event) {
-            console.log("Caption consumed: ", event);
-        }
-
-
-        return () => {
-            window.onYouglishAPIReady = null;
-        };
-    }, []);
-
-    return <div id="widget-1">Loading YouGlish player...</div>;
+function YouGlishWidget() {
+    return (
+        <div>
+            {/* 使用dangerouslySetInnerHTML插入HTML代码 */}
+            <div dangerouslySetInnerHTML={{
+                __html: `
+          <a id="yg-widget-0" class="youglish-widget" data-query="Aussie" data-lang="english" data-accent="aus" data-zones="all,us,uk,aus" data-components="8413" width="960" data-auto-start="0" data-bkg-color="theme_light"  rel="nofollow" href="https://youglish.com">Visit YouGlish.com</a>
+          <script async src="https://youglish.com/public/emb/widget.js" charset="utf-8"></script>
+        `
+            }} />
+        </div>
+    );
 }
 
-export default YouGlishComponent;
+export default YouGlishWidget;

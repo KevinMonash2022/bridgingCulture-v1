@@ -1,7 +1,6 @@
 import FeedLearn from '@/components/FeedLearn'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import YouTubeSearchComponent from '@/components/YouTubeSearchComponent'
 import React from 'react'
 import FeedFlipbook from '@/components/FeedFlipbook';
 import Image from 'next/image';
@@ -42,7 +41,7 @@ export default function learn() {
             <FeedFlipbook />
 
             <div className="text-center mb-20 mt-20 flex flex-col items-center text-2xl bg-[#ef7b7b] text-white p-2 rounded-2xl">
-                Simply search for a word and there will be a video containing the Australian accent of the word to help you learn the pronunciation of the word, complete with subtitles
+                Replace the word Aussie to what you want to learn.
             </div>
 
             {/* Feed */}

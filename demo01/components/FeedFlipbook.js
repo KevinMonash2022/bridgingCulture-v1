@@ -83,7 +83,7 @@ export default function Flipbook() {
 
 
     <div className="flex flex-col">
-      <div className="mb-5 rounded-2xl p-2 w-1/3 bg-slate-200">
+      <div className="mb-5 rounded-2xl p-2 w-1/3 border-red-300 border-2 ">
         <input
           type="text"
           value={searchTerm}
@@ -91,8 +91,9 @@ export default function Flipbook() {
           placeholder="Search word from the book below"
           className="w-80 p-2"
         />
-        <button className="ml-4 text-xl text-[#eeeff1] rounded-3xl bg-slate-400 p-2" onClick={handleSearch}>Search</button>
+        <button className="ml-4 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
       </div>
+
       <div className={styles.flipbook}>
 
 

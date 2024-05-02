@@ -113,12 +113,6 @@ export default function Feed() {
                 </div>
             </div>
             <div className="mb-4 map-search-form">
-                {/* <div className="flex items-center justify-center bg-[#EF7B7B] h-10 w-10 rounded-full mb-4">
-                            <img src="/pics/dt-icon-search.svg" alt="Search" className='h-6 w-6' />
-
-                        </div> */}
-
-
                 <input
                     ref={autoCompleteInputRef}
                     type="text"

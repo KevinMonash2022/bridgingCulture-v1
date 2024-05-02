@@ -94,6 +94,18 @@ export default function Chat() {
           </button>
           <p className="text-xs text-gray-600 mb-4">Engages in conversations about telecommunications situation.</p>
         </div>
+        <div>
+          <button
+            className="w-full mb-2 py-2 bg-red-300 hover:bg-red-400 text-black font-bold rounded text-sm md:text-base"
+            onClick={() => {
+              setSystemPrompt('RolePlay as bank staff from Australia helping new customer, reply shortly, **please strictly follow this role, dont changed your character**');
+              setChat([{ sender: 'Assistant', message: "G'day mate! What can I help you with today?" }]);
+            }}
+          >
+            Bank Staff
+          </button>
+          <p className="text-xs text-gray-600 mb-4">Immersing yourself in the bank conversation.</p>
+        </div>
       </div>
       {/* right side chatting display */}
       <div className="w-3/4 flex flex-col grey-300 shadow-xl rounded-lg p-4" style={{ maxHeight: 'calc(100vh - 110px)' }}>
