@@ -14,8 +14,8 @@ export default function Header() {
     { path: '/', label: 'Home' },
     { path: '/things', label: 'Start Your Journey' },
     { path: '/map', label: 'Discover Victoria' },
-    { path: '/chatbot', label: 'Aussie bot' },
     { path: '/learn', label: 'Aussie Accent' },
+    { path: '/chatbot', label: 'Aussie bot' },
   ];
 
   return (

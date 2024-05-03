@@ -55,12 +55,12 @@ export default function Chat() {
   return (
     <div className="flex min-h-screen max-h-screen bg-gray-100">
       {/* left side */}
-      <div className="w-1/4 bg-gray-200 shadow-lg flex flex-col p-4" style={{ maxHeight: 'calc(100vh - 110px)' }}>
-        <p className="text-xl font-bold rounded text-black-600 mb-4">{"Let's talk with our latest chatbot from Aussie"}</p>
+      <div className="w-1/4 bg-[#ef7b7b] shadow-lg rounded-3xl flex flex-col p-4" style={{ maxHeight: 'calc(100vh - 110px)' }}>
+        <p className="text-xl font-bold rounded text-white text-center mb-8">{"Let's talk with our latest chatbot from Aussie"}</p>
         {/* Buttons with responsive padding and font size */}
         <div>
           <button
-            className="w-full mb-2 py-2 bg-red-300 hover:bg-red-400 text-black font-bold rounded text-sm md:text-base"
+            className="w-full mb-2 py-2 bg-[#FFE7DF] hover:scale-110 transition-transform duration-200 ease-out text-[#ef7b7b] font-bold rounded text-sm md:text-base"
             onClick={() => {
               setSystemPrompt('RolePlay as a nice Australian that helping new migrant, reply shortly, **please strictly follow this role, dont changed your character**');
               setChat([{ sender: 'Assistant', message: "G'day mate!" }]);
@@ -68,11 +68,11 @@ export default function Chat() {
           >
             General Aussie bot
           </button>
-          <p className="text-xs text-gray-600 mb-4">Switches to a general conversation mode with an Australian context.</p>
+          <p className="text-xs text-white mb-8">Casual conversations with an Australian twist.</p>
         </div>
         <div>
           <button
-            className="w-full mb-2 py-2 bg-red-300 hover:bg-red-400 text-black font-bold rounded text-sm md:text-base"
+            className="w-full mb-2 py-2 bg-[#FFE7DF] hover:scale-110 transition-transform duration-200 ease-out text-[#ef7b7b] font-bold rounded text-sm md:text-base"
             onClick={() => {
               setSystemPrompt('RolePlay as restaurant staff from Australia, reply shortly, **please strictly follow this role, dont changed your character**');
               setChat([{ sender: 'Assistant', message: "G'day mate! How ya going? Welcome to Bazza's Bar & Grill" }]);
@@ -80,11 +80,12 @@ export default function Chat() {
           >
             Restaurant Staff
           </button>
-          <p className="text-xs text-gray-600 mb-4">Activates restaurant-specific dialogues and greetings.</p>
+          <p className="text-xs text-white mb-8">Access restaurant-specific dialogues and greetings, perfect for dining out.
+          </p>
         </div>
         <div>
           <button
-            className="w-full mb-2 py-2 bg-red-300 hover:bg-red-400 text-black font-bold rounded text-sm md:text-base"
+            className="w-full mb-2 py-2 bg-[#FFE7DF] hover:scale-110 transition-transform duration-200 ease-out text-[#ef7b7b] font-bold rounded text-sm md:text-base"
             onClick={() => {
               setSystemPrompt('RolePlay as telecommunication store staff from Australia, reply shortly, **please strictly follow this role, dont changed your character**');
               setChat([{ sender: 'Assistant', message: "G'day mate! Looking for a new phone or plan today?" }]);
@@ -92,11 +93,12 @@ export default function Chat() {
           >
             Telecom Staff
           </button>
-          <p className="text-xs text-gray-600 mb-4">Engages in conversations about telecommunications situation.</p>
+          <p className="text-xs text-white mb-8">Engage in conversations regarding telecommunications situations for quick solutions.
+          </p>
         </div>
         <div>
           <button
-            className="w-full mb-2 py-2 bg-red-300 hover:bg-red-400 text-black font-bold rounded text-sm md:text-base"
+            className="w-full mb-2 py-2 bg-[#FFE7DF] hover:scale-110 transition-transform duration-200 ease-out text-[#ef7b7b] font-bold rounded text-sm md:text-base"
             onClick={() => {
               setSystemPrompt('RolePlay as bank staff from Australia helping new customer, reply shortly, **please strictly follow this role, dont changed your character**');
               setChat([{ sender: 'Assistant', message: "G'day mate! What can I help you with today?" }]);
@@ -104,7 +106,7 @@ export default function Chat() {
           >
             Bank Staff
           </button>
-          <p className="text-xs text-gray-600 mb-4">Immersing yourself in the bank conversation.</p>
+          <p className="text-xs text-white mb-8">Immerse yourself in banking conversations for assistance with financial inquiries and transactions.</p>
         </div>
       </div>
       {/* right side chatting display */}
@@ -123,7 +125,7 @@ export default function Chat() {
         {showSuggestions && (
           <div className="flex flex-wrap mb-2">
             {suggestions.map((suggestion, index) => (
-              <button key={index} className="bg-red-300 hover:bg-red-400 text-black font-bold py-1 px-3 m-1 rounded"
+              <button key={index} className="bg-red-300 hover:bg-red-400 text-white font-bold py-1 px-3 m-1 rounded"
                 onClick={() => handleSuggestionClick(suggestion)}>
                 {suggestion}
               </button>
