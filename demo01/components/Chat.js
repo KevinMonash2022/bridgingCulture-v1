@@ -56,7 +56,7 @@ export default function Chat() {
     <div className="flex min-h-screen max-h-screen bg-gray-100">
       {/* left side */}
       <div className="w-1/4 bg-[#ef7b7b] shadow-lg rounded-3xl flex flex-col p-4" style={{ maxHeight: 'calc(100vh - 110px)' }}>
-        <p className="text-xl font-bold rounded text-white text-center mb-8">{"Let's talk with our latest chatbot from Aussie"}</p>
+        <p className="text-xl font-bold rounded text-white text-center mb-8">{"Chatbot for Australian Comprehension."}</p>
         {/* Buttons with responsive padding and font size */}
         <div>
           <button
