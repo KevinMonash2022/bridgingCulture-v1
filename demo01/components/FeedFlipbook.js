@@ -88,7 +88,7 @@ export default function Flipbook() {
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search word from the book below"
+          placeholder="Start typing any word"
           className="w-80 p-2"
         />
         <button className="ml-4 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
