@@ -69,6 +69,46 @@ export default function Flipbook() {
 
 
   return (
+    <div className="">
+      <div className="flex justify-center items-center">
+        <div className="mt-4 ml-12 mb-5 justify-center items-center rounded-2xl p-2 w-2/5 border-red-300 border-2 ">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Start typing any word"
+            className="w-80 p-2"
+          />
+          <button className="ml-8 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
+        </div>
+      </div>
+      <div className="flex flex-col mb-20">
+        <div className={styles.flipbook}>
+
+
+          <HTMLFlipBook
+            width={400}
+            height={300}
+            size="stretch"
+            minWidth={315}
+            maxWidth={640}
+            minHeight={300}
+            maxHeight={1000}
+            ref={bookRef}
+            className={styles.book}
+          >
+            {words.map((word, index) => (
+              <div className={styles.page} key={`page-${index}`}>
+                <div className={styles.pageContent}>
+                  <p>{word.left}</p>  {/* Removed "Left:" */}
+                  <p>{word.right}</p> {/* Removed "Right:" */}
+                </div>
+              </div>
+            ))}
+          </HTMLFlipBook>
+        </div>
+      </div>
+    </div>
     // <div className="flex flex-col">
     //   <div className="mb-5 rounded-2xl p-2 w-1/4 bg-slate-100">
     //     <input
@@ -82,43 +122,7 @@ export default function Flipbook() {
     //   <div className={styles.flipbook}>
 
 
-    <div className="flex flex-col">
-      <div className="mb-5 rounded-2xl p-2 w-1/3 border-red-300 border-2 ">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Start typing any word"
-          className="w-80 p-2"
-        />
-        <button className="ml-4 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
-      </div>
-
-      <div className={styles.flipbook}>
 
 
-        <HTMLFlipBook
-          width={400}
-          height={300}
-          size="stretch"
-          minWidth={315}
-          maxWidth={1000}
-          minHeight={300}
-          maxHeight={1000}
-          ref={bookRef}
-          className={styles.book}
-        >
-          {words.map((word, index) => (
-            <div className={styles.page} key={`page-${index}`}>
-              <div className={styles.pageContent}>
-                <p>{word.left}</p>  {/* Removed "Left:" */}
-                <p>{word.right}</p> {/* Removed "Right:" */}
-              </div>
-            </div>
-          ))}
-        </HTMLFlipBook>
-      </div>
-    </div>
-
-  );
+  )
 }

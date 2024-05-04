@@ -8,7 +8,8 @@ export default function Footer() {
     { path: '/things', label: 'Start Your Journey  |' },
     { path: '/map', label: 'Discover Victoria  |' },
     { path: '/learn', label: 'Aussie Accent  |' },
-    { path: '/chatbot', label: 'Chatbot' },
+    { path: '/chatbot', label: 'Chatbot |' },
+    { path: '/about', label: 'About us' },
   ];
 
   return (

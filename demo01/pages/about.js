@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FeedAbout from '@/components/FeedAbout';
 
 const UserPage = () => {
   const router = useRouter();
@@ -9,19 +10,16 @@ const UserPage = () => {
 
   return (
     <>
-    {/* Header */}
-    <Header/>
+      {/* Header */}
+      <Header />
 
-    {/* Feed */}
-    <div>
-      <h1>User: about</h1>
-      <p>This is the user page content.</p>
-    </div>
+      {/* Feed */}
+      <FeedAbout />
 
-    {/* Footer */}
-    <Footer/>
+      {/* Footer */}
+      <Footer />
     </>
-    
+
   );
 };
 

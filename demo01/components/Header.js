@@ -11,17 +11,18 @@ export default function Header() {
   };
 
   const menuItems = [
-    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
     { path: '/things', label: 'Start Your Journey' },
     { path: '/map', label: 'Discover Victoria' },
     { path: '/learn', label: 'Aussie Accent' },
     { path: '/chatbot', label: 'Aussie bot' },
+
   ];
 
   return (
-    <div className="flex sticky top-0 z-10 bg-[#edf2ec] shadow-md mb-6 justify-between">
+    <div className="flex sticky top-0 z-10 bg-[#edf2ec] shadow-md mb-6 justify-between rounded-3xl p-2">
       <div className="relative w-12 h-12 z-20" onClick={() => router.push('/')}>
-        <div className="absolute -left-4 -top-12 w-40 h-40 z-30 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out">
+        <div className="absolute -left-4 -top-14 w-40 h-40 z-30 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out">
           <Image src="/pics/LOGO.png" layout="fill" objectFit="contain" alt="Logo" className="header-logo" />
         </div>
       </div>
