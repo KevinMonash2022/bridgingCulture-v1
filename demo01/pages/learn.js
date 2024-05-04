@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import FeedFlipbook from '@/components/FeedFlipbook';
 
-export default function learn() {
+export default function Learn() {
     const bookRef = useRef(null);
     const videoRef = useRef(null);
 
@@ -36,7 +36,6 @@ export default function learn() {
 
             {/* feed */}
             {/* Flipbook */}
-
             <div ref={bookRef} className='text-white'>
                 space<br />space<br />space<br />space<br />
             </div>
@@ -53,7 +52,6 @@ export default function learn() {
             </div>
 
             {/* Feed */}
-
             <div ref={videoRef} className='text-white'>
                 space<br />space<br />space<br />space<br />
             </div>
