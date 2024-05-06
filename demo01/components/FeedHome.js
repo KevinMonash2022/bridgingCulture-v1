@@ -129,7 +129,6 @@ export default function FeedHome() {
                 </div>
 
                 <div className=' items-center  explore-sec' >
-
                     <div onClick={() => router.push('/chatbot')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
                         <Image
                             src="/pics/aussie.png" alt="Things to know"
@@ -153,6 +152,29 @@ export default function FeedHome() {
 
 
                 <div className=' items-center  explore-sec' >
+                    <div onClick={() => router.push('/Aussie')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
+                        <Image
+                            src="/pics/ComingSoon.jpg" alt="Things to know"
+                            layout="fill"
+                            objectFit="cover"
+                        />
+                    </div >
+                    <div className='explore-bottom'>
+                        <div className='text-3xl explore-top'>
+                            {"Coming Soon"}
+                        </div>
+                        <div className='ex-txt'>
+                            {"Coming Soon"}
+                        </div>
+                        <button onClick={() => router.push('/map')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl  duration-500 ease-out'>
+                            Learn more
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div className=' items-center  explore-sec' >
 
                     <div onClick={() => router.push('/Aussie')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
                         <Image
@@ -200,26 +222,29 @@ export default function FeedHome() {
                 </div>
 
 
+                <div className=' items-center  explore-sec' >
 
+                    <div onClick={() => router.push('/Aussie')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
+                        <Image
+                            src="/pics/ComingSoon.jpg" alt="Things to know"
+                            layout="fill"
+                            objectFit="cover"
+                        />
+                    </div >
+                    <div className='explore-bottom'>
+                        <div className='text-3xl explore-top'>
+                            {"Coming Soon"}
+                        </div>
+                        <div className='ex-txt'>
+                            {"Coming Soon"}
+                        </div>
+                        <button onClick={() => router.push('/map')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl  duration-500 ease-out'>
+                            Learn more
+                        </button>
+                    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
             </div>
-
-
-
         </div>
     )
 }

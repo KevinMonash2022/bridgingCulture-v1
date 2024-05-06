@@ -1,11 +1,9 @@
-import { useRouter } from 'next/router';
 import React from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Chat from "@/components/Chat";
+import FeedLLM from "@/components/FeedLLM";
 
 const UserPage = () => {
-  const router = useRouter();
 
   return (
     <>
@@ -13,7 +11,7 @@ const UserPage = () => {
     <Header/>
 
     {/* Feed */}
-    <Chat/>
+    <FeedLLM/>
 
     {/* Footer */}
     <Footer/>

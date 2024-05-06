@@ -1,10 +1,7 @@
 import React from 'react'
-
 export default function FeedLearn() {
     return (
         <>
-
-
             <div className=" justify-center items-center min-h-screen">
                 <div className="flex justify-center items-center">
                     <div className="mb-4 text-center flex flex-col w-3/5 items-center text-2xl bg-[#ef7b7b] text-white p-2 rounded-2xl">
@@ -21,7 +18,6 @@ export default function FeedLearn() {
         `
                     }} />
                 </div>
-
             </div>
 
         </>
