@@ -21,6 +21,8 @@ export default function Learn() {
         <>
             {/* Header */}
             <Header />
+
+
             {/* welcome */}
             <div className="mt-12 mb-12 flex flex-col items-center text-center">
                 {/* test */}
