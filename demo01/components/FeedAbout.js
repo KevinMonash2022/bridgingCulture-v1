@@ -24,7 +24,7 @@ export default function FeedAbout() {
                     <div className="text-xl">
                         At Bridge Beyond Borders, we believe in smoothing the path for young migrants like you.
                         <br />Founded by former migrants who understand the challenges of settling into a new environment,
-                        <br />we're here to guide you every step of the way as you build your new life in Victoria.
+                        <br />{"we're here to guide you every step of the way as you build your new life in Victoria."}
                     </div>
                 </div>
 
