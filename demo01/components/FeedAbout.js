@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function FeedAbout() {
     return (
@@ -62,6 +63,7 @@ export default function FeedAbout() {
                 </div>
 
             </div>
+
         </div>
 
     );

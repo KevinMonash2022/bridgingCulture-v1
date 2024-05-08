@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Loader } from "@googlemaps/js-api-loader";
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function Feed() {
     const mapRef = useRef(null);
@@ -166,6 +167,8 @@ export default function Feed() {
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 }
