@@ -4,8 +4,7 @@ import styles from "../styles/Flipbook.module.css";
 
 
 const words = [
-  { left: "Welcome to aussie pronunciation book", right: "Click the right side of the page to turn the page" },
-  { left: "Standard English words on the top side of the page", right: "The English phonetic symbols of aussie are on the above side of the page." },
+  
   { left: "Car", right: "Caa: The end r is not pronounced" },
   { left: "Caramel", right: "Ca-ra-mel" },
   { left: "Cliché", right: "Clee-shay" },

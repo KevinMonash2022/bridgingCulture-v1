@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
+    "@headlessui/react": "^2.0.3",
     "@mui/material": "^5.15.15",
     "axios": "^1.6.8",
     "dotenv": "^16.4.5",
