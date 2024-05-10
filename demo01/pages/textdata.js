@@ -7,14 +7,16 @@ export async function getServerSideProps({ query, req }) {
     const search = query.search || '';
     const page = parseInt(query.page) || 1;
 
-   
+
     const protocol = req.headers['x-forwarded-proto'] || 'http';
     const host = req.headers.host;
     const baseUrl = `${protocol}://${host}`;
 
-    
+
     const res = await fetch(`${baseUrl}/api/aussieSlang?letter=${letter}&page=${page}&pageSize=40&search=${search}`);
     const { data, total } = await res.json();
+    console.log('API Request URL:', `${baseUrl}/api/aussieSlang?letter=${letter}&page=${page}&pageSize=40&search=${search}`);
+    console.log('API Response:', data, total);
 
     return {
         props: { data, letter, search, total, page }, // will be passed to the page component as props
@@ -37,9 +39,8 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                 <button
                     key={page}
                     onClick={() => onPageChange(page)}
-                    className={`mx-1 px-3 py-1 rounded ${
-                        page === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
-                    }`}
+                    className={`mx-1 px-3 py-1 rounded ${page === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
+                        }`}
                 >
                     {page}
                 </button>
@@ -114,7 +115,7 @@ function QuizModal({ isOpen, setIsOpen, data }) {
 
     const toggleMode = () => {
         setIsHardMode(!isHardMode);
-        setCorrectCount(0); 
+        setCorrectCount(0);
     };
 
     if (!currentSlang) return null;
@@ -199,6 +200,7 @@ function QuizModal({ isOpen, setIsOpen, data }) {
                 </div>
             </Dialog>
         </Transition>
+
     );
 }
 
@@ -251,18 +253,16 @@ function AussieSlangPage({ data, letter, search, total, page }) {
                     <button
                         key={char}
                         onClick={() => handleFilterClick(char)}
-                        className={`mr-2 mb-2 px-4 py-2 rounded ${
-                            selectedLetter === char ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
-                        }`}
+                        className={`mr-2 mb-2 px-4 py-2 rounded ${selectedLetter === char ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
+                            }`}
                     >
                         {char}
                     </button>
                 ))}
                 <button
                     onClick={() => handleFilterClick('all')}
-                    className={`mr-2 mb-2 px-4 py-2 rounded ${
-                        selectedLetter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
-                    }`}
+                    className={`mr-2 mb-2 px-4 py-2 rounded ${selectedLetter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
+                        }`}
                 >
                     All
                 </button>
