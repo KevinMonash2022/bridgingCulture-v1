@@ -16,7 +16,7 @@ export default function Header() {
     { path: '/map', label: 'Discover Victoria' },
     { path: '/learn', label: 'Aussie Accent' },
     { path: '/chatbot', label: 'Aussie bot' },
-
+    { path: '/textdata', label: 'text' },
   ];
 
   return (
