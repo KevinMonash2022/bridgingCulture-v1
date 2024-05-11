@@ -86,10 +86,10 @@ export default function Flipbook() {
       <div className="flex justify-between mx-16 mt-6">
         <div className="flex space-x-4 text-xl items-center text-red-400">
           <Image src="/pics/down.svg" alt="down" height={50} width={50} />
-          <p>Click to the previous Page</p>
+          <p>Click to go to the previous Page</p>
         </div>
         <div className="flex space-x-4 text-xl items-center text-red-400">
-          <p>Click to the next Page</p>
+          <p>Click to go to the next Page</p>
           <Image src="/pics/down.svg" alt="down" height={50} width={50} />
         </div>
       </div>

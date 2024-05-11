@@ -1,43 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 export default function Header() {
   const router = useRouter();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleNavigation = async (path) => {
     await router.push(path);
     router.reload();
   };
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   const menuItems = [
     { path: '/', label: 'Home' },
     { path: '/things', label: 'Start Your Journey' },
     { path: '/map', label: 'Discover Victoria' },
-    { path: '/learn', label: 'Aussie Accent' },
+    {
+      label: 'Learning resources',
+      dropdown: [
+        { path: '/learn', label: 'Aussie accent' },
+        { path: '/test2', label: 'Aussie info' }
+      ]
+    },
     { path: '/chatbot', label: 'Aussie bot' },
-    { path: '/textdata', label: 'text' },
+    { path: '/textdata', label: 'Text' },
     { path: '/about', label: 'About' },
   ];
 
   return (
     <div className="flex sticky top-0 z-10 bg-[#edf2ec] shadow-md mb-6 justify-between rounded-3xl p-2">
       <div className="relative w-12 h-12 z-20" onClick={() => router.push('/')}>
-        <div className="absolute -left-4 -top-14 w-40 h-40 z-30 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out">
-          <Image src="/pics/LOGO.png" layout="fill" objectFit="contain" alt="Logo" className="header-logo" />
-        </div>
+        <Image src="/pics/LOGO.png" layout="fill" objectFit="contain" alt="Logo" className="header-logo" />
       </div>
 
       <div className="flex header-menu_part items-center text-2xl space-x-6">
         {menuItems.map(item => (
-          <div
-            key={item.label}
-            className={`px-4 cursor-pointer rounded-2xl transition-transform duration-200 ease-out hover:scale-125 ${router.pathname === item.path ? "underline text-[#EF7B7B] underline-offset-8 decoration-[3px]" : "hover:text-[#edf2ec] hover:bg-[#EF7B7B]"}`
-            }
-            onClick={() => handleNavigation(item.path)}
-          >
-            {item.label}
-          </div>
+          item.dropdown ? (
+            <div
+              key={item.label}
+              className={`px-4 cursor-pointer rounded-2xl transition-transform duration-200 ease-out hover:scale-125 ${dropdownOpen ? "underline text-[#EF7B7B] underline-offset-8 decoration-[3px]" : "hover:text-[#edf2ec] hover:bg-[#EF7B7B]"}`}
+              onClick={toggleDropdown}
+            >
+              {item.label}
+              {dropdownOpen && (
+                <div className="absolute mt-2 bg-white text-red-400 shadow-lg rounded-xl">
+                  {item.dropdown.map(subItem => (
+                    <div
+                      key={subItem.label}
+                      className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                      onClick={() => handleNavigation(subItem.path)}
+                    >
+                      {subItem.label}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <div
+              key={item.label}
+              className={`px-4 cursor-pointer rounded-2xl transition-transform duration-200 ease-out hover:scale-125 ${router.pathname === item.path ? "underline text-[#EF7B7B] underline-offset-8 decoration-[3px]" : "hover:text-[#edf2ec] hover:bg-[#EF7B7B]"}`}
+              onClick={() => handleNavigation(item.path)}
+            >
+              {item.label}
+            </div>
+          )
         ))}
       </div>
     </div>

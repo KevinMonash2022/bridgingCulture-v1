@@ -98,6 +98,10 @@ export default function Feed() {
         searchPlaces(event.target.value);
     };
 
+    const handleClearAll = () => {
+        location.reload();
+    };
+
     return (
 
         <div className="mt-10 mx-auto">
@@ -153,7 +157,7 @@ export default function Feed() {
                         ))}
                         <button
                             className="search-clear-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            onClick={clearMarkers}
+                            onClick={handleClearAll}
                         >
                             Clear All
                         </button>
