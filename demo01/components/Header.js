@@ -11,12 +11,13 @@ export default function Header() {
   };
 
   const menuItems = [
-    { path: '/about', label: 'About' },
+    { path: '/', label: 'Home' },
     { path: '/things', label: 'Start Your Journey' },
     { path: '/map', label: 'Discover Victoria' },
     { path: '/learn', label: 'Aussie Accent' },
     { path: '/chatbot', label: 'Aussie bot' },
     { path: '/textdata', label: 'text' },
+    { path: '/about', label: 'About' },
   ];
 
   return (
