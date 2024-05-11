@@ -29,10 +29,10 @@ export default function Learn() {
                 {/* test */}
                 <div className="text-center">
                     <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                        Welcome to Our Aussie Page
+                        Welcome to the Australian Accent Book!
                     </h1>
                     <p className="mt-12 text-lg leading-8 text-gray-600">
-                        {"Where Everything's Easy and Everyone's Welcome!"}
+                        {"Where Understanding is Easy and Everyone’s Welcome!"}
                     </p>
                 </div>
             </div>

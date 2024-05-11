@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function FeedHome() {
@@ -195,6 +196,69 @@ export default function FeedHome() {
                         </button>
                     </div>
 
+                </div>
+
+
+            </div>
+            <div className="flex justify-center space-x-12 mx-8 -mt-20">
+                <div className="flex-1 rounded-3xl my-16 p-8 bg-[#EF7B7B] text-white text-3xl shadow-xl shadow-[#EF7B7B]">
+                    <div className="text-center">
+                        Article 1 <br /><br />
+                    </div>
+                    <Link
+                        href="https://www.melbourne.vic.gov.au/about-melbourne/melbourne-profile/multicultural-communities/Pages/multicultural-communities.aspx"
+                    >
+                        <div className="flex flex-col items-center">
+                            <span className="block text-center rounded-full px-5 py-2 ">
+                                Multicultural communities
+                            </span>
+                            <Image src="/pics/p-1.png" alt='next' height={500} width={500} className='my-4' />
+                        </div>
+                    </Link>
+
+                    <div className="text-xl">
+                        The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities.
+                    </div>
+                </div>
+
+                <div className="flex-1 rounded-3xl my-16 p-8 bg-[#EF7B7B] text-white text-3xl shadow-xl shadow-[#EF7B7B]">
+                    <div className="text-center">
+                        Article 2 <br /><br />
+                    </div>
+                    <Link
+                        href="https://amesnews.com.au/lead-story/melbournes-secret-history-cultural-diversity/"
+                    >
+                        <div className="flex flex-col items-center">
+                            <span className="block text-center rounded-full px-5 py-2 ">
+                                Multicultural communities
+                            </span>
+                            <Image src="/pics/p-2.png" alt='next' height={500} width={500} className='my-4' />
+                        </div>
+                    </Link>
+
+                    <div className="text-xl">
+                        The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities.
+                    </div>
+                </div>
+
+                <div className="flex-1 rounded-3xl my-16 p-8 bg-[#EF7B7B] text-white text-3xl shadow-xl shadow-[#EF7B7B]">
+                    <div className="text-center">
+                        Article 1 <br /><br />
+                    </div>
+                    <Link
+                        href="https://www.viccouncils.asn.au/equality-and-diversity/supporting-diversity/cultural-diversity"
+                    >
+                        <div className="flex flex-col items-center">
+                            <span className="block text-center rounded-full px-5 py-2 ">
+                                Multicultural communities
+                            </span>
+                            <Image src="/pics/p-3.png" alt='next' height={500} width={500} className='my-4' />
+                        </div>
+                    </Link>
+
+                    <div className="text-xl">
+                        The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities.
+                    </div>
                 </div>
 
 

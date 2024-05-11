@@ -4,7 +4,7 @@ import styles from "../styles/Flipbook.module.css";
 
 
 const words = [
-  
+
   { left: "Car", right: "Caa: The end r is not pronounced" },
   { left: "Caramel", right: "Ca-ra-mel" },
   { left: "Cliché", right: "Clee-shay" },
@@ -70,15 +70,15 @@ export default function Flipbook() {
   return (
     <div className="">
       <div className="flex justify-center items-center">
-        <div className="mt-4 ml-12 mb-5 justify-center items-center rounded-2xl p-2 w-2/5 border-red-300 border-2 ">
+        <div className="mt-4 mb-5 items-center rounded-2xl p-2 w-5/6 border-red-300 border-2 ">
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Start typing any word"
-            className="w-80 p-2"
+            placeholder=" Search for any word within the book. "
+            className="w-96 mr-64 p-2"
           />
-          <button className="ml-8 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
+          <button className="ml-96 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
         </div>
       </div>
       <div className="flex flex-col mb-20">
