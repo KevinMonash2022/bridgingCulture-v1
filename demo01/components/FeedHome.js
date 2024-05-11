@@ -217,7 +217,7 @@ export default function FeedHome() {
                     </Link>
 
                     <div className="text-xl">
-                        The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities.
+                        {"The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities."}
                     </div>
                 </div>
 
@@ -230,34 +230,34 @@ export default function FeedHome() {
                     >
                         <div className="flex flex-col items-center">
                             <span className="block text-center rounded-full px-5 py-2 ">
-                                Multicultural communities
+                                {"Melbourne’s secret history of cultural diversity"}
                             </span>
                             <Image src="/pics/p-2.png" alt='next' height={500} width={500} className='my-4' />
                         </div>
                     </Link>
 
                     <div className="text-xl">
-                        The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities.
+                        The content
                     </div>
                 </div>
 
                 <div className="flex-1 rounded-3xl my-16 p-8 bg-[#EF7B7B] text-white text-3xl shadow-xl shadow-[#EF7B7B]">
                     <div className="text-center">
-                        Article 1 <br /><br />
+                        Article 3 <br /><br />
                     </div>
                     <Link
                         href="https://www.viccouncils.asn.au/equality-and-diversity/supporting-diversity/cultural-diversity"
                     >
                         <div className="flex flex-col items-center">
                             <span className="block text-center rounded-full px-5 py-2 ">
-                                Multicultural communities
+                                Cultural diversity
                             </span>
                             <Image src="/pics/p-3.png" alt='next' height={500} width={500} className='my-4' />
                         </div>
                     </Link>
 
                     <div className="text-xl">
-                        The City of Melbourne is home to one of the world's most harmonious and culturally diverse communities.
+                        The content
                     </div>
                 </div>
 
