@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import HTMLFlipBook from 'react-pageflip'
 import styles from "../styles/Flipbook.module.css";
-
+import Image from "next/image";
 
 const words = [
 
@@ -69,7 +69,9 @@ export default function Flipbook() {
 
   return (
     <div className="">
+
       <div className="flex justify-center items-center">
+
         <div className="mt-4 mb-5 items-center rounded-2xl p-2 w-5/6 border-red-300 border-2 ">
           <input
             type="text"
@@ -79,6 +81,16 @@ export default function Flipbook() {
             className="w-96 mr-64 p-2"
           />
           <button className="ml-96 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
+        </div>
+      </div>
+      <div className="flex justify-between mx-16 mt-6">
+        <div className="flex space-x-4 text-xl items-center text-red-400">
+          <Image src="/pics/down.svg" alt="down" height={50} width={50} />
+          <p>Click to the previous Page</p>
+        </div>
+        <div className="flex space-x-4 text-xl items-center text-red-400">
+          <p>Click to the next Page</p>
+          <Image src="/pics/down.svg" alt="down" height={50} width={50} />
         </div>
       </div>
       <div className="flex flex-col mb-20">
