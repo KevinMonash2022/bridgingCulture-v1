@@ -22,19 +22,19 @@ export default function Header() {
     {
       label: 'Learning resources',
       dropdown: [
+        { path: '/textdata', label: 'Aussie slangs' },
         { path: '/learn', label: 'Aussie accent' },
-        { path: '/test2', label: 'Aussie info' }
       ]
     },
     { path: '/chatbot', label: 'Aussie bot' },
-    { path: '/AussieSlangPage', label: 'Text' },
+    { path: '/textdata', label: 'AussieSlangPage' },
     { path: '/about', label: 'About' },
   ];
 
   return (
     <div className="flex sticky top-0 z-10 bg-[#edf2ec] shadow-md mb-6 justify-between rounded-3xl p-2">
-      <div className="relative w-12 h-12 z-20" onClick={() => router.push('/')}>
-        <Image src="/pics/LOGO.png" layout="fill" objectFit="contain" alt="Logo" className="header-logo" />
+      <div className="relative w-16 h-16 z-20" onClick={() => router.push('/')}>
+        <Image src="/pics/LOGO.png" layout="fill" objectFit="contain" alt="Logo" className="scale-150 cursor-pointer" />
       </div>
 
       <div className="flex header-menu_part items-center text-2xl space-x-6">
@@ -42,11 +42,11 @@ export default function Header() {
           item.dropdown ? (
             <div
               key={item.label}
-              className={`px-4 cursor-pointer rounded-2xl transition-transform duration-200 ease-out hover:scale-125 ${dropdownOpen ? "underline text-[#EF7B7B] underline-offset-8 decoration-[3px]" : "hover:text-[#edf2ec] hover:bg-[#EF7B7B]"}`}
+              className={`px-4 cursor-pointer rounded-2xl transition-transform duration-200 ease-out hover:scale-125 ${dropdownOpen && item.label === 'Learning resources' ? "underline text-[#EF7B7B] underline-offset-8 decoration-[3px]" : "hover:text-[#edf2ec] hover:bg-[#EF7B7B]"}`}
               onClick={toggleDropdown}
             >
-              {item.label}
-              {dropdownOpen && (
+              {item.label} {item.dropdown && '▼'}
+              {dropdownOpen && item.label === 'Learning resources' && (
                 <div className="absolute mt-2 bg-white text-red-400 shadow-lg rounded-xl">
                   {item.dropdown.map(subItem => (
                     <div
@@ -71,6 +71,7 @@ export default function Header() {
           )
         ))}
       </div>
+
     </div>
   );
 }

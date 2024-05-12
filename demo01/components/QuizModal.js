@@ -110,7 +110,7 @@ function QuizModal({ isOpen, setIsOpen, data }) {
                                         <button
                                             key={index}
                                             onClick={() => handleOptionClick(option)}
-                                            className="w-full mt-2 px-4 py-2 rounded bg-red-300 text-white hover:bg-red-400"
+                                            className="w-full mt-2 px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
                                         >
                                             {option}
                                         </button>
@@ -123,7 +123,7 @@ function QuizModal({ isOpen, setIsOpen, data }) {
                                     <strong>Correct Answers:</strong> {correctCount}
                                 </p>
                                 {isHardMode && (
-                                    <p className="mt-2 text-red-300">Mode: Hard - Testing from all slangs</p>
+                                    <p className="mt-2 text-blue-500">Mode: Hard - Testing from all slangs</p>
                                 )}
                                 <div className="mt-4">
                                     <button

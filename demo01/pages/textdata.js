@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Pagination from '../components/Pagination';
 import QuizModal from '../components/QuizModal';
 import Header from '../components/Header';
@@ -10,9 +10,11 @@ export async function getServerSideProps({ query, req }) {
     const letter = query.letter || '';
     const search = query.search || '';
     const page = parseInt(query.page) || 1;
+
     const protocol = req.headers['x-forwarded-proto'] || 'http';
     const host = req.headers.host;
     const baseUrl = `${protocol}://${host}`;
+
     const res = await fetch(`${baseUrl}/api/aussieSlang?letter=${letter}&page=${page}&pageSize=40&search=${search}`);
     const { data, total } = await res.json();
 
@@ -51,9 +53,9 @@ function AussieSlangPage({ data, letter, search, total, page }) {
     if (!hasMounted) return null;
 
     return (
-        <>
+        <div className="">
             <Header />
-            <div className="container mx-auto p-4">
+            <div className="p-4">
                 <h1 className="text-2xl font-bold mb-4">Australian Slangs</h1>
                 <form onSubmit={handleSearch} className="mb-4 flex items-center">
                     <input
@@ -102,13 +104,15 @@ function AussieSlangPage({ data, letter, search, total, page }) {
                 <div className="mt-8 flex justify-center">
                     <button
                         onClick={() => setIsQuizOpen(true)}
-                        className="bg-red-300 text-white px-6 py-3 rounded hover:bg-blue-600"
+                        className="bg-red-300 text-white px-6 py-3 rounded hover:bg-red-400"
                     >
                         Test Your Knowledge
                     </button>
                 </div>
                 <QuizModal isOpen={isQuizOpen} setIsOpen={setIsQuizOpen} data={data} />
             </div>
+
+            {/* Flow */}
             <div className=" justify-between mx-16 text-4xl text-center my-16 flex -x-8">
                 <Link
                     href="/"
@@ -134,9 +138,11 @@ function AussieSlangPage({ data, letter, search, total, page }) {
                     </div>
                 </Link>
             </div>
+
             <Footer />
-        </>
+        </div>
     );
 }
 
 export default AussieSlangPage;
+
