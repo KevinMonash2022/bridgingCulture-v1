@@ -27,7 +27,7 @@ export default function Header() {
       ]
     },
     { path: '/chatbot', label: 'Aussie bot' },
-    { path: '/textdata', label: 'Text' },
+    { path: '/AussieSlangPage', label: 'Text' },
     { path: '/about', label: 'About' },
   ];
 
