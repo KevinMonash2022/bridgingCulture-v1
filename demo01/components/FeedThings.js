@@ -121,7 +121,7 @@ export default function FeedThings() {
                     </div>
                     <div className="flex rounded-lg bg-[#FFE7DF] ">
                         <p>
-                            {"You can typically open a bank account within 12 months of arriving if you have your passport and visa. Some banks allow you to start the process online before moving."} <a href="https://www.finder.com.au">(finder.com.au)</a>
+                            {"You can typically open a bank account within 12 months of arriving if you have your passport and visa. Some banks allow you to start the process online before moving."}
                         </p>
                     </div>
 
@@ -249,7 +249,7 @@ export default function FeedThings() {
                     </div>
                     <div className="flex  rounded-lg bg-[#FFE7DF] ">
                         <p>
-                            {"SFind clinics and hospitals near your residence for easy access. Websites like HealthDirect Australia can help you locate health services and book appointments."}
+                            {"Find clinics and hospitals near your residence for easy access. Websites like HealthDirect Australia can help you locate health services and book appointments."}
                         </p>
                     </div>
 
@@ -371,7 +371,7 @@ export default function FeedThings() {
     };
 
     return (
-        <div className='mx-auto my-4 p-4 flex-grow min-h-screen'>
+        <div className='mx-auto my-4 p-4 flex-grow'>
             <div className="mb-8">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
