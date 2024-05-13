@@ -55,7 +55,18 @@ function AussieSlangPage({ data, letter, search, total, page }) {
     return (
         <div className="">
             <Header />
-            <div className="p-4">
+            <div className="text-center">
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                    {"G'Day Mate!"}
+                    <br /><br />
+                    {"Dive Into different Aussie Slangs"}
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                    {"Explore the quirks of Australian English and master the lingo like a true local"}
+                </p>
+
+            </div>
+            <div className="p-4 mt-6">
                 <h1 className="text-2xl font-bold mb-4">Australian Slangs</h1>
                 <form onSubmit={handleSearch} className="mb-4 flex items-center">
                     <input

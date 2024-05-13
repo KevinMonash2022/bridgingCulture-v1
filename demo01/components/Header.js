@@ -26,7 +26,7 @@ export default function Header() {
         { path: '/learn', label: 'Australian accent' },
       ]
     },
-    { path: '/chatbot', label: 'Aussie bot' },
+    { path: '/chatbot', label: 'Australian Comprehension' },
     { path: '/about', label: 'About' },
   ];
 

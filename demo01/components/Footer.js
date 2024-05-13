@@ -9,7 +9,7 @@ export default function Footer() {
     { path: '/map', label: 'Discover Victoria  |' },
     { path: '/textdata', label: 'Australian Slangs  |' },
     { path: '/learn', label: 'Aussie Accent  |' },
-    { path: '/chatbot', label: 'Chatbot |' },
+    { path: '/chatbot', label: 'Australian Comprehension  |' },
     { path: '/about', label: 'About us' },
   ];
 

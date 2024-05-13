@@ -72,15 +72,18 @@ export default function Flipbook() {
 
       <div className="flex justify-center items-center">
 
-        <div className="mt-4 mb-5 items-center rounded-2xl p-2 w-5/6 border-red-300 border-2 ">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder=" Search for any word within the book. "
-            className="w-96 mr-64 p-2"
-          />
-          <button className="ml-96 text-xl text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
+        <div className="flex mt-4 mb-5 items-center justify-between rounded-2xl p-2 w-5/6 border-red-300 border-2 ">
+          <div className="ml-4">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder=" Search for any word within the book. "
+              className="w-96 p-2"
+            />
+          </div>
+
+          <button className="text-xl mr-4 text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
         </div>
       </div>
       <div className="flex justify-between mx-16 mt-6">
