@@ -132,7 +132,7 @@ function AussieSlangPage({ data, letter, search, total, page }) {
                 >
                     <div className="flex items-center">
                         <span className="block rounded-full px-5 py-2 ">
-                            Aussie accent
+                            Australian accent
                         </span>
                         <Image src="/pics/right.svg" alt='next' height={50} width={50} className="invert" />
                     </div>

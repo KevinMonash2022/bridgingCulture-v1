@@ -39,6 +39,7 @@ export default function FeedHome() {
                         src="/pics/beach-melbourne.webp"
                         alt="brighton-beach"
                         width={1600} height={600}
+
                     />
                 </div>
 
@@ -66,6 +67,7 @@ export default function FeedHome() {
                             src="/pics/Things to know (tab1).jpg" alt="Things to know"
                             layout="fill"
                             objectFit="cover"
+                            className='hover:blur-sm transition-transform duration-300 ease-out'
                         />
                     </div >
                     <div className='explore-bottom'>
@@ -75,7 +77,7 @@ export default function FeedHome() {
                         <div className='ex-txt '>
                             {"Learn essential insights on Victoria's transportation, shopping, banking, healthcare, and communication to smoothly adjust to your new community."}
                         </div>
-                        <button onClick={() => router.push('/things')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl  duration-500 ease-out'>
+                        <button onClick={() => router.push('/things')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
@@ -89,6 +91,7 @@ export default function FeedHome() {
                             src="/pics/Australia.jpg" alt="Things to know"
                             layout="fill"
                             objectFit="cover"
+                            className='hover:blur-sm transition-transform duration-300 ease-out'
                         />
                     </div >
                     <div className='explore-bottom'>
@@ -98,7 +101,7 @@ export default function FeedHome() {
                         <div className=' ex-txt '>
                             {"Explore Victoria's wonders, from the Great Ocean Road's cliffs to Melbourne's lively lanes, and let every place tell its story, enhancing your journey."}
                         </div>
-                        <button onClick={() => router.push('/map')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
+                        <button onClick={() => router.push('/map')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
@@ -112,16 +115,17 @@ export default function FeedHome() {
                             src="/pics/ComingSoon.jpg" alt="Things to know"
                             layout="fill"
                             objectFit="cover"
+                            className='hover:blur-sm transition-transform duration-300 ease-out'
                         />
                     </div >
                     <div className='explore-bottom'>
                         <div className='text-3xl explore-top'>
-                            {"Aussie Slangs"}
+                            {"Australian Slangs"}
                         </div>
                         <div className='ex-txt'>
                             {"Coming Soon"}
                         </div>
-                        <button onClick={() => router.push('/AussieSlangPage')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl  duration-500 ease-out'>
+                        <button onClick={() => router.push('/AussieSlangPage')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
@@ -135,6 +139,7 @@ export default function FeedHome() {
                             src="/pics/Aussie slangs(tab).gif" alt="Things to know"
                             layout="fill"
                             objectFit="cover"
+                            className='hover:blur-sm transition-transform duration-300 ease-out'
                         />
                     </div >
                     <div className='explore-bottom'>
@@ -144,7 +149,7 @@ export default function FeedHome() {
                         <div className='ex-txt'>
                             {"Master the Aussie accent effortlessly! Explore pronunciation with our Accent Dictionary, refine communication skills, and feel at home in Australian conversations."}
                         </div>
-                        <button onClick={() => router.push('/learn')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
+                        <button onClick={() => router.push('/learn')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
@@ -157,6 +162,7 @@ export default function FeedHome() {
                             src="/pics/aussie.png" alt="Things to know"
                             layout="fill"
                             objectFit="cover"
+                            className='hover:blur-sm transition-transform duration-300 ease-out'
                         />
                     </div >
                     <div className='explore-bottom'>
@@ -166,7 +172,7 @@ export default function FeedHome() {
                         <div className='ex-txt'>
                             {"Unlock Aussie slang with our chatbot! Dive into local expressions, boost language skills, and blend seamlessly into the community."}
                         </div>
-                        <button onClick={() => router.push('/chatbot')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl duration-500 ease-out'>
+                        <button onClick={() => router.push('/chatbot')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
