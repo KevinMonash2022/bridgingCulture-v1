@@ -7,6 +7,7 @@ export default function Footer() {
   const menuItems = [
     { path: '/things', label: 'Start Your Journey  |' },
     { path: '/map', label: 'Discover Victoria  |' },
+    { path: '/textdata', label: 'Australian Slangs  |' },
     { path: '/learn', label: 'Aussie Accent  |' },
     { path: '/chatbot', label: 'Chatbot |' },
     { path: '/about', label: 'About us' },

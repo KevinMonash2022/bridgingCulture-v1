@@ -22,12 +22,11 @@ export default function Header() {
     {
       label: 'Learning resources',
       dropdown: [
-        { path: '/textdata', label: 'Aussie slangs' },
-        { path: '/learn', label: 'Aussie accent' },
+        { path: '/textdata', label: 'Australian slangs' },
+        { path: '/learn', label: 'Australian accent' },
       ]
     },
     { path: '/chatbot', label: 'Aussie bot' },
-    { path: '/textdata', label: 'AussieSlangPage' },
     { path: '/about', label: 'About' },
   ];
 
