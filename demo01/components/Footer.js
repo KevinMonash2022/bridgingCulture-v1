@@ -8,7 +8,7 @@ export default function Footer() {
     { path: '/things', label: 'Start Your Journey  |' },
     { path: '/map', label: 'Discover Victoria  |' },
     { path: '/textdata', label: 'Australian Slangs  |' },
-    { path: '/learn', label: 'Aussie Accent  |' },
+    { path: '/learn', label: 'Australian Accent  |' },
     { path: '/chatbot', label: 'Australian Comprehension  |' },
     { path: '/about', label: 'About us' },
   ];

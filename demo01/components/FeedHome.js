@@ -110,7 +110,7 @@ export default function FeedHome() {
 
                 <div className=' items-center  explore-sec' >
 
-                    <div onClick={() => router.push('/AussieSlangPage')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
+                    <div onClick={() => router.push('/textdata')} className='explore-img  duration-200 ease-out relative rounded-3xl overflow-hidden' style={{ width: '100%', height: '250px' }}>
                         <Image
                             src="/pics/Aussie slangs(tab).gif" alt="Things to know"
                             layout="fill"
@@ -126,7 +126,7 @@ export default function FeedHome() {
                             {"Explore Australian slangs and speak like a true Aussie! And come across an easy way of learning and testing your knowledge."}
 
                         </div>
-                        <button onClick={() => router.push('/AussieSlangPage')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
+                        <button onClick={() => router.push('/textdata')} className='mt-3 bg-[#EF7B7B] text-white p-2 rounded-2xl hover:scale-110 duration-500 ease-out'>
                             Learn more
                         </button>
                     </div>
