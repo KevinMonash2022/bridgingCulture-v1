@@ -90,7 +90,7 @@ export default function Learn() {
                 >
                     <div className="flex items-center">
                         <span className="block rounded-full px-5 py-2 ">
-                            Chatbot
+                            Australian Comprehension
                         </span>
                         <Image src="/pics/right.svg" alt='next' height={50} width={50} className="invert" />
                     </div>
