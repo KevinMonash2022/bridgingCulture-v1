@@ -50,8 +50,21 @@ export default function FeedHome() {
                     <div className=' text-6xl font-bold banner-heading'>
                         {"Are you a new migrant?"}
                     </div>
-                    <div className=' text-2xl banner-text'>
-                        {"From learning the local lingo to finding your favorite spots. We're here every step of the way."}
+                    <div className=' text-2xl banner-text '>
+                        <div className="">
+                            {"From learning the local lingo to finding your favorite spots. We're here every step of the way."}
+                        </div>
+                    </div>
+                    <div className="flex justify-end mr-12">
+                        <button onClick={scrollToDiv} className='p-2 bg-red-300 text-white hover:scale-125 translation duration-300 ease-out'>
+                            <Image
+                                src="/pics/arrowDown.svg"
+                                alt="arrowDown"
+                                width={25}
+                                height={25}
+                                className="invert"
+                            />
+                        </button>
                     </div>
 
 
@@ -182,6 +195,8 @@ export default function FeedHome() {
 
 
             </div>
+
+
             <div className="flex justify-center space-x-12 mx-8 -mt-20">
                 <div className="flex-1 rounded-3xl my-16 p-8 bg-[#EF7B7B] text-white text-3xl shadow-xl shadow-[#EF7B7B]">
 

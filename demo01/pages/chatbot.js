@@ -13,6 +13,15 @@ const UserPage = () => {
       <Header />
 
       {/* Feed */}
+      <div className="text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          Navigate towards success
+        </h1>
+        <p className="mt-6 mb-4 text-lg leading-8 text-gray-600">
+          Let our chatbot be your trusted guide to efficiency and excellence!
+        </p>
+
+      </div>
       <FeedLLM />
 
 

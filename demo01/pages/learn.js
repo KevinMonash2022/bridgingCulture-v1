@@ -32,7 +32,7 @@ export default function Learn() {
                         Welcome to the Australian Accent Book!
                     </h1>
                     <p className="mt-12 text-lg leading-8 text-gray-600">
-                        {"Where Understanding is Easy and Everyone’s Welcome!"}
+                        {"We made pronouncing easy with our book, come and try it out.."}
                     </p>
                 </div>
             </div>

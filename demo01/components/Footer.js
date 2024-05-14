@@ -5,11 +5,11 @@ export default function Footer() {
   const router = useRouter();
 
   const menuItems = [
-    { path: '/things', label: 'Start Your Journey  |' },
-    { path: '/map', label: 'Discover Victoria  |' },
-    { path: '/textdata', label: 'Australian Slangs  |' },
-    { path: '/learn', label: 'Australian Accent  |' },
-    { path: '/chatbot', label: 'Australian Comprehension  |' },
+    { path: '/things', label: 'Start Your Journey |' },
+    { path: '/map', label: 'Discover Victoria |' },
+    { path: '/textdata', label: 'Australian Slangs |' },
+    { path: '/learn', label: 'Australian Accent |' },
+    { path: '/chatbot', label: 'Australian Comprehension |' },
     { path: '/about', label: 'About us' },
   ];
 
@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="bg-red-300 text-white p-6 text-center">
       <div className="flex justify-center items-center space-x-4 mb-6">
         <div className="shrink-0">
-          {/* Update the src path to the correct location */}
+          {/* Ensure the src path to the image is correct */}
           <Image src="/pics/Logo-01.png" alt="Logo" width={50} height={50} />
         </div>
         <span className="text-lg font-semibold">Bridge Beyond Borders</span>
@@ -27,7 +27,7 @@ export default function Footer() {
           <span
             key={item.label}
             onClick={() => router.push(item.path)}
-            className="cursor-pointer text-lg hover:text-blue-300"
+            className={`cursor-pointer text-lg ${router.pathname === item.path ? 'text-blue-300' : 'hover:text-blue-300'}`}
           >
             {item.label}
           </span>
