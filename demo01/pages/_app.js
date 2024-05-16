@@ -5,6 +5,8 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
+
+      {/* Test Spped Insight */}
       {/* <SpeedInsights /> */}
     </>
   );
