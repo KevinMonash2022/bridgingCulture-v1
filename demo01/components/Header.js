@@ -32,8 +32,8 @@ export default function Header() {
 
   return (
     <div className="flex sticky top-0 z-10 bg-[#edf2ec] shadow-md mb-6 justify-between rounded-3xl p-2">
-      <div className="relative w-16 h-16 z-20" onClick={() => router.push('/')}>
-        <Image src="/pics/LOGO.png" layout="fill" objectFit="contain" alt="Logo" className="scale-150 cursor-pointer" />
+      <div className="relative" onClick={() => router.push('/')}>
+        <Image src="/pics/LOGO.png" width={80} height={80} alt="Logo" className="cursor-pointer hover:scale-150 translation duration-300 ease-out" />
       </div>
 
       <div className="flex header-menu_part items-center text-2xl space-x-6">
