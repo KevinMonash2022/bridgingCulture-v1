@@ -29,8 +29,8 @@ export default async function handler(req, res) {
         { text },
         {
           model: "aura-helios-en",
-          encoding: "linear16",
-          container: "wav",
+          encoding: "mp3",
+          //container: "wav",
         }
       );
 
