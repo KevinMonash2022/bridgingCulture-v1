@@ -56,7 +56,7 @@ export default function Flipbook() {
   const handleSearch = () => {
     const normalizedSearchTerm = searchTerm.trim().toLowerCase();
     const searchIndex = words.findIndex(entry =>
-      entry.left.toLowerCase() === normalizedSearchTerm && searchableTitles.has(entry.left)
+      entry.left.toLowerCase() === normalizedSearchTerm
     );
 
     if (searchIndex !== -1 && bookRef.current) {
@@ -66,24 +66,22 @@ export default function Flipbook() {
     }
   };
 
-
   return (
     <div className="">
-
       <div className="flex justify-center items-center">
-
         <div className="flex mt-4 mb-5 items-center justify-between rounded-2xl p-2 w-5/6 border-red-300 border-2 ">
           <div className="ml-4">
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder=" Search for any word within the book. "
+              placeholder="Search for any word within the book."
               className="w-96 p-2"
             />
           </div>
-
-          <button className="text-xl mr-4 text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>Search</button>
+          <button className="text-xl mr-4 text-white rounded-3xl bg-red-300 p-2 hover:scale-110 transition-transform duration-200 ease-out" onClick={handleSearch}>
+            Search
+          </button>
         </div>
       </div>
       <div className="flex justify-between mx-16 mt-6">
@@ -98,8 +96,6 @@ export default function Flipbook() {
       </div>
       <div className="flex flex-col mb-20">
         <div className={styles.flipbook}>
-
-
           <HTMLFlipBook
             width={400}
             height={300}
@@ -114,8 +110,9 @@ export default function Flipbook() {
             {words.map((word, index) => (
               <div className={styles.page} key={`page-${index}`}>
                 <div className={styles.pageContent}>
-                  <p>{word.left}</p>  {/* Removed "Left:" */}
-                  <p>{word.right}</p> {/* Removed "Right:" */}
+                  <p>{word.left}</p>
+                  <p>{word.right}</p>
+                  <div className="absolute bottom-2 right-2 text-lg">{index + 1}</div>  {/* Enlarged page numbers */}
                 </div>
               </div>
             ))}
@@ -123,20 +120,5 @@ export default function Flipbook() {
         </div>
       </div>
     </div>
-    // <div className="flex flex-col">
-    //   <div className="mb-5 rounded-2xl p-2 w-1/4 bg-slate-100">
-    //     <input
-    //       type="text"
-    //       value={searchTerm}
-    //       onChange={(e) => setSearchTerm(e.target.value)}
-    //       placeholder="Search the book..."
-    //     />
-    //     <button className="ml-5" onClick={handleSearch}>Search</button>
-    //   </div>
-    //   <div className={styles.flipbook}>
-
-
-
-
-  )
+  );
 }
