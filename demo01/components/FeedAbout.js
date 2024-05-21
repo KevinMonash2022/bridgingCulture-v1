@@ -88,26 +88,7 @@ export default function FeedAbout() {
                 <Image src="/pics/Culture infusion.jpeg" alt='Culture infusion' height={150} width={150}  />
 
             </div> */}
-            <div className="flex justify-center items-center space-x-20 my-6">
-                {/* <Image src="/pics/Culture infusion.jpeg" alt='Culture infusion' height={150} width={150} />
-                <Image src="/pics/Melbourne-Logo-pms-2765-rgb.png" alt='study melbourne' height={150} width={150} />
-                <Image src="/pics/Multiculturalb.png" alt='vic multicultural' height={150} width={150} /> */}
-                <Link href="https://culturalinfusion.org.au/" className="flex-shrink-0" target="_blank">
-                    <Image src="/pics/Culture infusion.jpeg" alt='Culture infusion' height={150} width={150}
-                        className='hover:scale-125 transition-transform duration-200 ease-out'
-                    />
-                </Link>
-                <Link href="https://www.studymelbourne.vic.gov.au/" className="flex-shrink-0" target="_blank">
-                    <Image src="/pics/Melbourne-Logo-pms-2765-rgb.png" alt='study melbourne' height={150} width={150}
-                        className='hover:scale-125 transition-transform duration-200 ease-out'
-                    />
-                </Link>
-                <Link href="https://www.multiculturalcommission.vic.gov.au/" className="flex-shrink-0" target="_blank">
-                    <Image src="/pics/Multiculturalb.png" alt='vic multicultural' height={150} width={150}
-                        className='hover:scale-125 transition-transform duration-200 ease-out'
-                    />
-                </Link>
-            </div>
+
 
         </div>
 
